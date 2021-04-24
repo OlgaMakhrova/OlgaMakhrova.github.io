@@ -1,0 +1,50 @@
+html {
+  font-size: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+image {
+  max-width: 100%;
+}
+
+section {
+  padding: 10rem 0;
+}
+
+.container {
+  width: 1260px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.header__header {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  margin-right: auto;
+}
+
+.header-contacts {
+  margin-right: 3rem;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #1a1820;
+}
+
+.header__btn {
+  width: 225px;
+  height: 50px;
+  background-color: #fcb303;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fcfcfc;
+}
