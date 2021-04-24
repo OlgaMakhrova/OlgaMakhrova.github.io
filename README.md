@@ -10,4 +10,4 @@
 [Урок 13 - адаптивная вертска](https://github.com/OlgaMakhrova/OlgaMakhrova.github.io/ "адаптивная верстка") 
 
 
-[Модуль 5 - Часть 1] (https://github.com/OlgaMakhrova/OlgaMakhrova.github.io/tree/main/module%205%20part1/ "верстка "header")
+[Модуль 5 - Часть 1](https://github.com/OlgaMakhrova/OlgaMakhrova.github.io/tree/main/module%205%20part1/ "верстка "header")
