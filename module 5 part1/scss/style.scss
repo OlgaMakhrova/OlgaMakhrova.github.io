@@ -1,3 +1,22 @@
+@font-face {
+	font-family: 'ProximaNova Regular';
+	src: url('../font/proxima_nova_regular.eot'); /* IE 9 Compatibility Mode */
+	src: url('../font/proxima_nova_regular.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../font/proxima_nova_regular.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../font/proxima_nova_regular.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../font/proxima_nova_regular.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../font/proxima_nova_regular.svg#proxima_nova_regular') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+@font-face {
+	font-family: 'ProximaNova Bold';
+	src: url('../font/proxima_nova_bold.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/proxima_nova_bold.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/proxima_nova_bold.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/proxima_nova_bold.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/proxima_nova_bold.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/proxima_nova_bold.svg#proxima_nova_bold') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
 // colors
 $btn-color: #fcb303;
 $icon-color: #4bc316;
@@ -6,10 +25,19 @@ $text-color2: #fcfcfc;
 $bg-color1: #286b0a;
 $bg-color2: #f5f5f5;
 $danger: #ff0000;
+$ff: 'ProximaNova Regular';
 
 // basic setting
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 html{
   font-size: 10px;
+}
+body{
+  font-family: $ff;
 }
 a {
   text-decoration: none;
@@ -19,39 +47,148 @@ image {
 }
 
 // typography
-section {
-  padding: 10rem 0;
-}
+// section {
+//   padding: 10rem 0;
+// }
 
 .container{
-  width: 1260px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
+  width: 1295px;
+  
  }
-.header__header{
-  display: flex;
-  align-items: center;
-    
-}.header__logo{
-    margin-right: auto;
+ .main{
+   height: 70rem;
+   background: #fff url(../img/main_bg.jpg) center center no-repeat;
+   background-size: cover;
+ }
+.header{
+  &__header{
+    display: flex;
+    align-items: center;
+    margin-bottom: 12rem;
+  }
+  &__logo{
+      margin-right: auto;
+  }
+  &-contacts{
+    margin-right: 3rem;
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 700;
+    color: $text-color;
+  
+  }
 }
-.header-contacts{
-  margin-right: 3rem;
-  font-size: 20px;
-  line-height: 1.2;
-  font-weight: 700;
-  color: $text-color;
- 
-}
-.header__btn {
+.button {
   width: 225px;
   height: 50px;
   background-color: $btn-color;
   border: none;
   border-radius: 8px;
+  font-family: $ff;
   font-size: 1.2rem;
   font-weight: 600;
   text-transform: uppercase;
   color: $text-color2;
   
 }
+.hero{
+  // заголовок
+  &__title{
+    margin-bottom: 4rem;
+    font-size: 4rem;
+    text-transform: uppercase;
+    line-height: 58px;
+    font-weight: 700;
+  }
+  // подзаголовок
+  &__subtitle{
+    margin-bottom: 4rem;
+    font-size: 2.4rem;
+    line-height: 1.2;
+    font-weight: 400;
+  }
+  // зеленый ярлык
+  &__price{
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 3rem 0;
+    width: 225px;
+    height: 105px;
+    background-color: $icon-color;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    color: $text-color2;
+  }
+  // цифра300
+  &__price strong{
+    font-size: 2rem;
+  }
+  // оплата по факту
+  &__trigger{
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  &__form{
+    margin: 0 0 3rem 0;
+    padding: 3rem;
+    // max-width: 35.5rem;
+    min-height: 410px;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  // заголовок формы
+  &__form-title{
+    margin-bottom: 4rem;
+    font-size: 1.4rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+    // поле для ввода
+  &__form-input{
+    display: block;
+    margin: 3rem 0;
+    padding: 1.5rem;
+    width: 100%;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+  }
+  // подписи к полям
+  label{
+    position: absolute;
+    transform: translateX(-50%)translateY(-50%);
+    padding: 0.5rem;
+    font-size: 1.3rem;
+    background-color: #fff;
+  }
+  &__btn{
+    width: 100%;
+    height: 65px;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  // надпись под кнопкой
+  &__form-text{
+    display: block;
+    margin-top: 1.5rem;
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 400;
+  }
+  &__textunder{
+    padding-left: 2.5rem;
+    width: 80%;
+    font-size: 1.2rem;
+    
+  }
+  
+}
+.row{
+  justify-content: space-between;
+}
+ 
