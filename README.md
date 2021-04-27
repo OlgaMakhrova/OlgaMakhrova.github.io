@@ -14,3 +14,5 @@
 
 
 [Урок 14 - Подключение шрифтов](https://github.com/OlgaMakhrova/OlgaMakhrova.github.io/ "Подключение шрифтов")
+
+[Модуль 5 Часть2- Подключение шрифтов.Верстка первого экрана](https://github.com/OlgaMakhrova/OlgaMakhrova.github.io/ "Подключение шрифтов. Верстка первого экрана")
