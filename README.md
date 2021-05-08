@@ -19,3 +19,5 @@
 
 
 [Урок 15 - Псевдоклассы и псевдоэлементы](https://github.com/OlgaMakhrova/OlgaMakhrova.github.io/ "Псевдоклассы и псевдоэлементы")
+
+[Модуль 5 Часть3- Эффекты при наведении и адаптив первого экрана] (https://github.com/OlgaMakhrova/OlgaMakhrova.github.io/ "Эффекты при наведении и адаптив первого экрана")
