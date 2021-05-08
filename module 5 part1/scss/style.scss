@@ -39,11 +39,16 @@ html{
 body{
   font-family: $ff;
 }
+button, input, a{
+  &:focus{
+    outline: none;
+  }
+}
 a {
   text-decoration: none;
 }
 image {
-  max-width: 100%;
+  width: 100%;
 }
 
 // typography
@@ -52,26 +57,26 @@ image {
 // }
 
 .container{
-  width: 1295px;
-  
+max-width: 1295px;
+ 
  }
- .main{
-   height: 70rem;
-   background: #fff url(../img/main_bg.jpg) center center no-repeat;
-   background-size: cover;
- }
+ 
 .header{
-  &__header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+     
+  &__item{
     display: flex;
     align-items: center;
-    margin-bottom: 12rem;
   }
   &__logo{
       margin-right: auto;
   }
-  &-contacts{
+  &-phone { 
     margin-right: 3rem;
-    font-size: 2rem;
+    font-size: calc(13px + 7 * (100vw / 1295));
     line-height: 1.2;
     font-weight: 700;
     color: $text-color;
@@ -89,13 +94,22 @@ image {
   font-weight: 600;
   text-transform: uppercase;
   color: $text-color2;
+  &:hover{
+    background-color: darken($btn-color, 5%);
+  }
   
 }
 .hero{
+   top: 0;
+   padding-top: 19rem;
+   min-height: 70rem;
+   background: #fff url(../img/main_bg.jpg) center center no-repeat;
+   background-size: cover;
   // заголовок
   &__title{
     margin-bottom: 4rem;
     font-size: 4rem;
+    // font-size: calc(37px + 2.5 * (100vw / 1295));
     text-transform: uppercase;
     line-height: 58px;
     font-weight: 700;
@@ -133,7 +147,6 @@ image {
   &__form{
     margin: 0 0 3rem 0;
     padding: 3rem;
-    // max-width: 35.5rem;
     min-height: 410px;
     background-color: #fff;
     text-align: center;
@@ -144,7 +157,7 @@ image {
     margin-bottom: 4rem;
     font-size: 1.4rem;
   }
-  h2 {
+  &__form-title h2 {
     font-size: 1.6rem;
   }
     // поле для ввода
@@ -176,7 +189,7 @@ image {
   &__form-text{
     display: block;
     margin-top: 1.5rem;
-    font-size: 12px;
+    font-size: 1.2rem;
     line-height: 1.2;
     font-weight: 400;
   }
@@ -191,4 +204,54 @@ image {
 .row{
   justify-content: space-between;
 }
- 
+ @media (max-width: 991px) {
+.header{
+    &-phone{
+      text-align: center;
+    }
+  }
+  
+.row{
+ justify-content: center;
+ text-align: center;
+    
+  }
+}
+@media(max-width: 767px){
+  .header{
+    
+    &__item {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1rem;
+      
+    }
+    &-phone{
+      margin: 0;
+      padding-right: 1rem;
+    }
+      &__btn {
+       margin: 1.5rem 0;
+      
+    }
+      &__logo{
+        flex: 0 0 100%;
+        order: 3;
+        text-align: center;
+    }
+}
+}
+
+@media (max-width: 540px){
+.hero{
+   background-position: top left;
+  &__title{
+    font-size: 2.5rem;
+  }
+  &__title{
+    line-height: 3rem;
+  }
+}
+}

@@ -26,35 +26,38 @@ body {
   font-family: "ProximaNova Regular";
 }
 
+button:focus, input:focus, a:focus {
+  outline: none;
+}
+
 a {
   text-decoration: none;
 }
 
 image {
-  max-width: 100%;
+  width: 100%;
 }
 
 .container {
-  width: 1295px;
+  max-width: 1295px;
 }
 
-.main {
-  height: 70rem;
-  background: #fff url(../img/main_bg.jpg) center center no-repeat;
-  background-size: cover;
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
-
-.header__header {
+.header__item {
   display: flex;
   align-items: center;
-  margin-bottom: 12rem;
 }
 .header__logo {
   margin-right: auto;
 }
-.header-contacts {
+.header-phone {
   margin-right: 3rem;
-  font-size: 2rem;
+  font-size: calc(13px + 7 * (100vw / 1295));
   line-height: 1.2;
   font-weight: 700;
   color: #1a1820;
@@ -72,7 +75,17 @@ image {
   text-transform: uppercase;
   color: #fcfcfc;
 }
+.button:hover {
+  background-color: #e3a103;
+}
 
+.hero {
+  top: 0;
+  padding-top: 19rem;
+  min-height: 70rem;
+  background: #fff url(../img/main_bg.jpg) center center no-repeat;
+  background-size: cover;
+}
 .hero__title {
   margin-bottom: 4rem;
   font-size: 4rem;
@@ -117,7 +130,7 @@ image {
   margin-bottom: 4rem;
   font-size: 1.4rem;
 }
-.hero h2 {
+.hero__form-title h2 {
   font-size: 1.6rem;
 }
 .hero__form-input {
@@ -146,7 +159,7 @@ image {
 .hero__form-text {
   display: block;
   margin-top: 1.5rem;
-  font-size: 12px;
+  font-size: 1.2rem;
   line-height: 1.2;
   font-weight: 400;
 }
@@ -158,4 +171,47 @@ image {
 
 .row {
   justify-content: space-between;
+}
+
+@media (max-width: 991px) {
+  .header-phone {
+    text-align: center;
+  }
+
+  .row {
+    justify-content: center;
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  .header__item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  .header-phone {
+    margin: 0;
+    padding-right: 1rem;
+  }
+  .header__btn {
+    margin: 1.5rem 0;
+  }
+  .header__logo {
+    flex: 0 0 100%;
+    order: 3;
+    text-align: center;
+  }
+}
+@media (max-width: 540px) {
+  .hero {
+    background-position: top left;
+  }
+  .hero__title {
+    font-size: 2.5rem;
+  }
+  .hero__title {
+    line-height: 3rem;
+  }
 }
